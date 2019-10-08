@@ -1,0 +1,64 @@
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item active">Список товаров</li>
+</ol>
+
+
+<h3 align="center" > Список товаров</h3>
+&nbsp;
+<style>
+  .center {
+    text-align: center;
+  }
+</style>
+<div class = "center">
+  <button  type="button" class="btn btn-success"  routerLink="/addp">добавить товар</button>
+</div>
+<h3 align="center" >👆👆👆</h3>
+
+&nbsp;
+<style>
+   table {
+    width: 800px; /* Ширина таблицы */
+    border: 5px solid  Gainsboro; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+   }
+   td {
+    text-align: center; /* Выравниваем текст по центру ячейки */
+   }
+  </style>
+
+<table class="table table-dark">
+  <thead>
+  <tr>
+    <th scope="col" >ID</th>
+    <th scope="col" >Наименование</th>
+    <th scope="col" >Цена</th>
+    <th scope="col" >Id склада</th>
+    <th scope="col" >Id поставщика</th>
+    <th scope="col" ></th>
+    <th scope="col" ></th>
+    <th scope="col" ></th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products; index as i">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.w_id}}</td>
+    <td>{{product.p_id}}</td>
+
+    <td>
+      <button type="button" class="btn btn-info" routerLink="/showp/{{product.id}}">Просмотр</button>   </td>
+    <td>
+      <button type="button" class="btn btn-warning" routerLink="/editp/{{product.id}}">Редакт.</button>   </td>
+
+    <td>
+      <button type="button" class="btn btn-danger" (click)="delete(product)">X</button>  </td>
+  </tr>
+  </tbody>
+</table>
+

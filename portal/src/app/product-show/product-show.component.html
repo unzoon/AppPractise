@@ -1,0 +1,40 @@
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item "><a href="/products_list">Список товаров</a></li>
+  <li class="breadcrumb-item active">Просмотр записи</li>
+</ol>
+
+<style>
+  .block {
+  text-align: center;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 40%;
+
+     }
+</style>
+
+
+<div class="block">
+  <div *ngIf="product">
+    <h2>Просмотр записи</h2>
+  &nbsp;
+    <p>
+      Id товара: {{product.id}}
+    </p>
+  <p>
+     Наименование: {{product.name}}
+  </p>
+  <p>
+    Цена: {{product.price}}
+  </p>
+  <p>
+    Id склада: {{product.w_id}}
+  </p>
+    <p>
+    Id поставщика: {{product.p_id}}
+   </p>
+</div>
+</div>

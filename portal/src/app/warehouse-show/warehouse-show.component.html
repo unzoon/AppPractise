@@ -1,0 +1,35 @@
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item "><a href="/warehouses_list">Список складов</a></li>
+  <li class="breadcrumb-item active">Просмотр записи</li>
+</ol>
+
+<style>
+  .block {
+  text-align: center;
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 40%;
+
+     }
+</style>
+
+<div class="block">
+  <div *ngIf="warehouse">
+    <h2>Просмотр записи</h2>
+    <p> Id склада: {{warehouse.id}} </p>
+      <p>
+        Адрес: {{warehouse.address}}
+      </p>
+      <p>
+        Самовывоз: {{warehouse.pickup}}
+      </p>
+      <p>
+        Телефон: {{warehouse.phone}}
+      </p>
+
+</div>
+
+</div>

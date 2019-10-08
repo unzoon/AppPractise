@@ -1,0 +1,50 @@
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item "><a href="/warehouses_list">Список складов</a></li>
+  <li class="breadcrumb-item active">Добавить склад</li>
+</ol>
+
+<style>
+  .block {
+  text-align: center;
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 40%;
+
+     }
+</style>
+
+<div class="block">
+  <h2>Добавить склад</h2>
+  &nbsp;
+    <p>
+      <label>Адрес:
+        <input [(ngModel)]="warehouse.address" placeholder="Адрес склада"/>
+      </label>
+    </p>
+  <p>
+    <label>Телефон:
+      <input [(ngModel)]="warehouse.phone" placeholder="Телефон "/>
+    </label>
+  </p>
+    <p>
+
+      <label>Самовывоз:
+        <label class="radio-inline">
+          <input
+            type="radio"
+            [(ngModel)]="warehouse.pickup"
+            value="Да">Да
+        </label>
+        <label class="radio-inline">
+          <input
+            type="radio"
+            [(ngModel)]="warehouse.pickup"
+            value="Нет">Нет
+        </label>
+      </label>
+    </p>
+
+</div>
+

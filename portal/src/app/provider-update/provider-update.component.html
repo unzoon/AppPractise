@@ -1,0 +1,46 @@
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item "><a href="/providers_list">Список поставщиков</a></li>
+  <li class="breadcrumb-item active">Изменить данные о поставщике</li>
+</ol>
+
+<style>
+  .block {
+  text-align: center;
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 40%;
+
+     }
+</style>
+
+<div class="block">
+  <div *ngIf="provider">
+  <h2>Изменить поставщика</h2>
+  &nbsp;
+  <p>
+    <label>Название фирмы:
+      <input [(ngModel)]="provider.name" placeholder="Название фирмы"/>
+    </label>
+  </p>
+  <p>
+    <label>ФИО директора:
+      <input [(ngModel)]="provider.fio" placeholder="ФИО "/>
+    </label>
+  </p>
+  <p>
+    <label>Телефон:
+      <input [(ngModel)]="provider.phone" placeholder="Телефон "/>
+    </label>
+  </p>
+  <p>
+    <label> Адрес офиса:
+      <input [(ngModel)]="provider.address" placeholder="Адрес "/>
+    </label>
+  <p>
+    <button  type="button" class="btn btn-success"  (click)="save()">Сохранить</button>
+  </p>
+</div>
+</div>

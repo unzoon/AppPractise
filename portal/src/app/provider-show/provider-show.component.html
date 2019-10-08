@@ -1,0 +1,38 @@
+
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item "><a href="/providers_list">Список поставщиков</a></li>
+  <li class="breadcrumb-item active">Просмотр записи</li>
+</ol>
+
+<style>
+  .block {
+  text-align: center;
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 40%;
+
+     }
+</style>
+
+<div class="block">
+  <div *ngIf="provider">
+    <h2>Просмотр записи</h2>
+    &nbsp;
+    <p>Id поставщика: {{provider.id}} </p>
+      <p>
+        Название фирмы: {{provider.name}}
+      </p>
+      <p>
+        ФИО директора: {{provider.fio}}
+      </p>
+      <p>
+        Телефон: {{provider.phone}}
+      </p>
+      <p>
+        Адрес офиса: {{provider.address}}
+      </p>
+  </div>
+</div>

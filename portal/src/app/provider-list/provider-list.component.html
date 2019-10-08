@@ -1,0 +1,63 @@
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item active">Список поставщиков</li>
+</ol>
+
+
+<h3 align="center" > Список поставщиков</h3>
+&nbsp;
+<style>
+  .center {
+    text-align: center;
+  }
+</style>
+<div class = "center">
+  <button  type="button" class="btn btn-success"  routerLink="/addm">добавить поставщика</button>
+</div>
+<h3 align="center" >👆👆👆</h3>
+
+&nbsp;
+<style>
+   table {
+    width: 800px; /* Ширина таблицы */
+    border: 5px solid  Gainsboro; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+   }
+   td {
+    text-align: center; /* Выравниваем текст по центру ячейки */
+   }
+  </style>
+
+<table class="table table-dark">
+  <thead>
+  <tr>
+    <th scope="col" >ID</th>
+    <th scope="col" >Название фирмы</th>
+    <th scope="col" >ФИО директора</th>
+    <th scope="col" >Телефон</th>
+    <th scope="col" >Адрес</th>
+    <th scope="col" ></th>
+    <th scope="col" ></th>
+    <th scope="col" ></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let provider of providers; index as i">
+    <td>{{provider.id}}</td>
+    <td>{{provider.name}}</td>
+    <td>{{provider.fio}}</td>
+    <td>{{provider.phone}}</td>
+    <td>{{provider.address}}</td>
+
+    <td>
+      <button type="button" class="btn btn-info" routerLink="/showm/{{provider.id}}">Просмотр</button>   </td>
+    <td>
+      <button type="button" class="btn btn-warning" routerLink="/editm/{{provider.id}}">Редакт.</button>   </td>
+
+    <td>
+      <button type="button" class="btn btn-danger" (click)="delete(provider)">X</button>  </td>
+  </tr>
+  </tbody>
+</table>
+

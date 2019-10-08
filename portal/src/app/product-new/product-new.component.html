@@ -1,0 +1,45 @@
+
+<ol  class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/menu">Меню</a></li>
+  <li class="breadcrumb-item "><a href="/products_list">Список товаров</a></li>
+  <li class="breadcrumb-item active">Добавить товар</li>
+</ol>
+
+<style>
+  .block {
+  text-align: center;
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 40%;
+
+     }
+</style>
+
+  <div class="block">
+  <h2>Добавить товар</h2>
+  &nbsp;
+    <p>
+      <label>Наименование:
+        <input [(ngModel)]="product.name" placeholder="Наименование"/>
+      </label>
+    </p>
+    <p>
+      <label>Цена:
+        <input [(ngModel)]="product.price" placeholder="Цена "/>
+      </label>
+    </p>
+    <p>
+    <label>Id склада:
+      <input [(ngModel)]="product.w_id" placeholder="Id склада "/>
+    </label>
+    </p>
+    <p>
+      <label>Id поставщика:
+        <input [(ngModel)]="product.p_id" placeholder="Id поставщика "/>
+      </label>
+    <p>
+      <button  type="button" class="btn btn-success"  (click)="save()">Сохранить</button>
+    </p>
+  </div>
+
